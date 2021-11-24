@@ -54,6 +54,13 @@ public class JOLSample_03_Packing {
      * declared order. Nothing in the JVM spec requires otherwise.
      */
 
+    /**
+     * 字段并非按申明顺序布局
+     *
+     * 重新排列，尽量凑出8个字节一组
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         out.println(VM.current().details());
         out.println(ClassLayout.parseClass(A.class).toPrintable());

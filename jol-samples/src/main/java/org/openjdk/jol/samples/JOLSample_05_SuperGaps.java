@@ -54,6 +54,11 @@ public class JOLSample_05_SuperGaps {
      *    https://bugs.openjdk.java.net/browse/JDK-8237767
      */
 
+    /**
+     * 为了保证父类字段offset相同，不会调整字段顺序
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         out.println(VM.current().details());
         out.println(ClassLayout.parseClass(C.class).toPrintable());

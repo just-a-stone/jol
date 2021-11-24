@@ -53,6 +53,11 @@ public class JOLSample_06_HierarchyGaps {
      *    https://bugs.openjdk.java.net/browse/JDK-8237767
      */
 
+    /**
+     * 同案例5
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         out.println(VM.current().details());
         out.println(ClassLayout.parseClass(C.class).toPrintable());

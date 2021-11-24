@@ -50,6 +50,16 @@ public class JOLSample_04_Inheritance {
      * VM to lay out the superclass fields first.
      */
 
+    /**
+     * 继承类布局
+     *
+     * 1 先布局父类字段
+     * 2 再布局子类字段
+     *
+     * 目的：不管以哪个类访问，父类字段所在offset不变
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         out.println(VM.current().details());
         out.println(ClassLayout.parseClass(C.class).toPrintable());
